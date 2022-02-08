@@ -2,7 +2,7 @@ const express = require('express')
 const ejs = require('ejs')
 const cookieParser = require('cookie-parser')
 const app = express()
-const port = process.env.PORT || 9000
+const port = process.env.PORT
 const router = require('./controller')
 //
 app.use(express.json())
