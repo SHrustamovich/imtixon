@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2 class="h2">Admin page</h2>
+        </header>
+        <hr>
+        <div class="main">
+            <div class="sidebar">
+                <ul class="list">
+                    <li class="list-item">
+                       <img src="assets/image/teacher.png" alt="teacher" class="img">
+                        <button class="btn" id="teacher">O'qtuvchi</button>
+                    </li>
+                   
+                    <li class="list-item">
+                         <img src="assets/image/student.png" alt="student" class="img">
+                         <button class="btn" id="Student">O'quvchi</button>
+                     </li>
+                     <li class="list-item">
+                        <img src="assets/image/group.png" alt="group" class="img">
+                        <button class="btn" id="group">Guruhlar</button>
+                    </li>
+                    <li class="list-item">
+                        <img src="assets/image/course.png" alt="course" class="img">
+                        <button class="btn" id="course">Kurslar</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="middle">
+                <!-- teacher table -->
+               <div class="middleTeacher">
+                <div class="midHead">
+                    <h3 class="h3">O'qtuvchilar</h3>
+                </div>
+                <hr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Ism</th>
+                            <th>Cantact</th>
+                            <th>Group</th>
+                            <th>Course</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let tea of foundTeacher) {%>
+                            <tr>
+                                <td><%=tea.id %></td>
+                                <td><%=tea.name %></td>
+                                <td><%=tea.phone %></td>
+                                <td><%=tea.group %></td>
+                                <td><%=tea.course %></td>
+                            
+                        </tr>
+                        <%}%>
+                    </tbody>
+                </table>
+               </div>
+               <!-- student table -->
+               <div class="middleStudent">
+                <div class="midHead">
+                    <h3 class="h3">O'quvchilar</h3>
+                </div>
+                <hr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Group</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let stu of foundStudent) {%>
+                        <tr>
+                            <td><%=stu.id %></td>
+                            <td><%=stu.name %></td>
+                            <td><%=stu.phone %></td>
+                            <td><%=stu.group %></td>
+                            
+                        </tr>
+                        <%}%>
+                    </tbody>
+                </table>
+            </div>
+            <!-- group table -->
+            <div class="middleGroup">
+                <div class="midHead">
+                    <h3 class="h3">Guruhlar</h3>
+                </div>
+                <hr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Group name</th>
+                            <th>Course name</th>
+                            <th>Teacher</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let group of allGroup) {%>
+                            <tr>
+                                <td><%= group.groupName %></td>
+                                <td><%= group.course %></td>
+                                <td><%= group.teacher %></td>
+                                
+                            </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- course table -->
+                <div class="middleCourse">
+                    <div class="midHead">
+                        <h3 class="h3">Kurslar</h3>
+                    </div>
+                    <hr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Course name</th>
+                                <th>Info</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <% for(let course of allCourse) {%>
+                        <tr>
+                            <td><%= course.courseName %></td>
+                            <td><%= course.info %></td>
+                            <td><%= course.price %></td>
+                        </tr>
+                        <%}%>
+                    </tbody>
+                </table>
+               </div>
+            </div>
+            <div class="right-side">
+               <h2 class="right-h3">Yangi foydalanuvchi qo'shish</h2>
+               <hr>
+               <!-- teacher add -->
+               <form action="/addTeacher" method="POST" class="form" enctype="application/x-www-form-urlencoded">
+                   <input type="text" class="Tinput" name="teacherName" placeholder="Username">
+                   <input type="text" class="Tinput" name="teacherPhone" placeholder="Phone-number">
+                   <select name="course" class="Tinput">
+                       <option value="1" selected>Kursni tanlang</option>
+                       <% for(let course of allCourse) {%>
+                       <option value="<%= course.courseName %>"><%= course.courseName %></option>
+                       <%}%>
+                   </select>
+                   <select name="group" class="Tinput">
+                    <option value="1" selected>Guruhni tanlang</option>
+                    <% for(let group of allGroup) {%>
+                    <option value="<%= group.groupName%>"><%= group.groupName %></option>
+                    <%}%>
+                </select>
+                   <button class="Right-btn" type="submit">Create</button>
+               </form>
+               <!-- student add -->
+               <form action="/addStudent" method="POST" class="formStudent" enctype="application/x-www-form-urlencoded">
+                <input type="text" class="Tinput" name="studentName" placeholder="Username">
+                <input type="text" class="Tinput" name="studentPhone" placeholder="Phone-number">
+                <select name="course" class="Tinput">
+                    <option value="1" selected>Kursni tanlang</option>
+                    <% for(let course of allCourse) {%>
+                    <option value="<%= course.courseName %>"><%= course.courseName %></option>
+                    <%}%>
+                </select>
+                <select name="group" class="Tinput">
+                    <option value="1" selected>Guruhni tanlang</option>
+                    <% for(let group of allGroup) {%>
+                    <option value="<%= group.groupName%>"><%= group.groupName %></option>
+                    <%}%>
+                </select>
+                <button class="Right-btn" type="submit">Create</button>
+            </form>
+            <!-- group add -->
+            <form action="/addGroup" method="POST" class="formGroup" enctype="application/x-www-form-urlencoded">
+                <input type="text" class="Tinput" name="groupName" placeholder="Guruh nomi">
+                <select name="course" class="Tinput">
+                    <option value="1" selected>Kursni tanlang</option>
+                    <% for(let course of allCourse) {%>
+                    <option value="<%= course.courseName %>"><%= course.courseName %></option>
+                    <%}%>
+                </select>
+                <select name="teacher" class="Tinput">
+                    <option value="1" selected>O'qtuvchini tanlang</option>
+                    <% for(let tea of foundTeacher) {%>
+                    <option value="<%=tea.name %>"><%=tea.name %></option>
+                    <%}%>
+                </select>
+                <button class="Right-btn" type="submit">Create</button>
+            </form>
+              <!-- course add -->
+            <form action="/addCourse" method="POST" class="formCourse" enctype="application/x-www-form-urlencoded">
+                <input type="text" class="Tinput" name="courseName" placeholder="Kurs nomi">
+                <input type="text" class="Tinput" name="info" placeholder="tasnifi">
+                <input type="number" class="Tinput" name="price" placeholder="narxi">
+                
+                <button class="Right-btn" type="submit">Create</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>

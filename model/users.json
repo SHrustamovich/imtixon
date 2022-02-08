@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "name": "shohruh",
+        "password": "943155666",
+        "role": "admin",
+        "phone": "943155666"
+    },
+    {
+        "id": 2,
+        "name": "dilshod",
+        "password": "942335666",
+        "role": "teacher",
+        "phone": "942335666",
+        "group": "N10",
+        "course": "web dasturlash"
+    },
+    {
+        "id": 3,
+        "name": "jahongir",
+        "password": "935541120",
+        "role": "student",
+        "phone": "935541120",
+        "group": "N10",
+        "course": "web dasturlash"
+    },
+    {
+        "id": 4,
+        "name": "gulxumor",
+        "password": "12345678987654",
+        "role": "teacher",
+        "phone": "12345678987654",
+        "course": "tarix"
+    },
+    {
+        "id": 5,
+        "name": "dadaxon",
+        "password": "65432",
+        "role": "student",
+        "phone": "65432",
+        "course": "inliz tili",
+        "group": "sayyora"
+    },
+    {
+        "id": 6,
+        "name": "xilola",
+        "password": "09876543",
+        "role": "teacher",
+        "phone": "09876543",
+        "group": "n10",
+        "course": "rus tili"
+    }
+]

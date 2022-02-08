@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "courseName": "rus tili",
+        "info": "info",
+        "price": 34000
+    },
+    {
+        "id": 2,
+        "courseName": "inliz tili",
+        "info": "wertyuygfdsfg",
+        "price": "54000"
+    },
+    {
+        "id": 3,
+        "courseName": "tarix",
+        "info": "tarixiy sahnalar",
+        "price": "12345"
+    },
+    {
+        "id": 4,
+        "courseName": "tarix",
+        "info": "tarixiy sahnalar",
+        "price": "12345"
+    },
+    {
+        "id": 5,
+        "courseName": "geografiya",
+        "info": "geografiyani bilish",
+        "price": "543000"
+    },
+    {
+        "id": 6,
+        "courseName": "daerteyrhyjh",
+        "info": "afesgdhgj",
+        "price": "2314567"
+    }
+]

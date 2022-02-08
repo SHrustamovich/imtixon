@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "groupName": "n10",
+        "course": "web dasturlash",
+        "teacher": "sherzod"
+    },
+    {
+        "id": 2,
+        "groupName": "sayyora",
+        "course": "web dasturlash",
+        "teacher": "dilshod"
+    }
+]

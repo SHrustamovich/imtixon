@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/teacher.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2 class="h2">Teacher page</h2>
+        </header>
+        <hr>
+        <div class="main">
+            <div class="sidebar">
+                <ul class="list">
+                    <li class="list-item">
+                        <img src="assets/image/student.png" alt="student" class="img">
+                        <button class="btn" id="Student">O'quvchi</button>
+                    </li>
+                     <li class="list-item">
+                        <img src="assets/image/group.png" alt="group" class="img">
+                        <button class="btn" id="Group">Guruhlar</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="middle">
+                <!-- student form -->
+               <div class="StudentForm">
+                <div class="midHead">
+                    <h3 class="h3">My table</h3>
+                </div>
+                <hr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%for(let student of findStudent) {%>
+                            <tr>
+                                <td><%= student.id %></td>
+                                <td><%= student.name %></td>
+                                <td><%= student.phone %></td>
+                            </tr>
+                            <%}%>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- group form -->
+                <div class="GroupForm">
+                    <div class="midHead">
+                        <h3 class="h3">My table</h3>
+                    </div>
+                    <hr>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Kurs nomi</th>
+                                <th>Guruh</th>
+                                <th>O'qtuvchi</th>
+                                <th>Uyga vazifa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                        <tr>
+                            <td><%= foundUser.id %></td>
+                            <td><%= foundUser.course %></td>
+                            <td><%= foundUser.group %></td>
+                            <td><%= foundUser.name %></td>
+                            <td><button id="uploadFile">send</button></td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+               </div>
+            </div>
+            <div class="right-side">
+                <form action="/upload" class="fileForm" method="POST" enctype="multipart/form-data">
+                <input name="document" type="file">
+                <button type="submit" class="Filebutton">Send</button>    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/teacher.js"></script>
+</body>
+</html>

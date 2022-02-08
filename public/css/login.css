@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+    font-family: "Sansita Swashed", cursive;
+  }
+  .box{
+    position: relative;
+    padding: 30px 30px;
+    background: #fff;
+    border-radius: 10px;
+  }
+  .input{
+    top: 0;
+    left: 0;
+    border: 1px solid #000;
+    outline: none;
+    padding: 3px;
+    border-radius: 7px;
+    font-size: 1em;
+  }
+  .button{
+   border-radius: 5px;
+   padding: 5px;
+   font-size: 1em;
+   margin-left: 10px;
+   background: dodgerblue;
+  }
+  .button:hover{
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+  }

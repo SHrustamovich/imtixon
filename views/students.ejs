@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/student.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h2 class="h2">Students page</h2>
+        </header>
+        <hr>
+        <div class="main">
+            <div class="sidebar">
+                <ul class="list">
+                     <li class="list-item">
+                        <img src="assets/image/group.png" alt="group" class="img">
+                        <button class="btn">Guruhlar</button>
+                    </li>
+                   
+                </ul>
+            </div>
+            <div class="middle">
+                <div class="midHead">
+                    <h3 class="h3">My table</h3>
+                </div>
+                <hr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>Kurs nomi</th>
+                            <th>Guruh</th>
+                            <th>O'qtuvchi</th>
+                            <th>Vazifani ko'rish</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><%=foundUser.id%></td>
+                            <td><%=foundUser.course%></td>
+                            <td><%=foundUser.group%></td>
+                            <% for (let teach of foundTeacher) {%>
+                                <td><%=teach.teacher%></td>
+                          <%}%>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

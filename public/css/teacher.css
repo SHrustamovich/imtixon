@@ -1,0 +1,106 @@
+.h2{
+    margin-left: 70px;
+    margin-top: 30px;
+}
+.main{
+    display: flex;
+}
+.sidebar{
+    width: 300px;
+   border-right: 2px solid #000;
+}
+.list{
+    list-style-type: none;
+    margin-top: 30px;
+}
+.list-item{
+    display: flex;
+    margin-bottom: 50px;
+}
+.img{
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+  
+}
+.btn{
+    margin-left: 30px;
+    padding: 3px 15px;
+    font-size: 20px;
+    border: none;
+    background-color: #fff;
+}
+.btn:hover{
+    font-style: italic;
+    color: green;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+}
+.middle{
+    width: 950px;
+    margin: 6px;
+    /* border-right: 1px solid #000; */
+}
+.StudentForm{
+    display: none;
+}
+.SFORM{
+    display: block;
+}
+.GroupForm{
+    display: none;
+}
+.GFORM{
+    display: block;
+}
+.midHead{
+    display: flex;
+}
+.h3{
+    margin-left: 40px;
+}
+.table{
+	border: 1px solid #eee;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.table td{
+	padding: 5px 10px;
+	border: 1px solid #eee;
+	text-align: left;
+}
+.table tbody tr:nth-child(odd){
+	background: #fff;
+}
+.table tbody tr:nth-child(even){
+	background: #F7F7F7;
+}
+.fileForm{
+    display: none;
+    flex-direction: column;
+}
+.fileFormF{
+    display: flex;
+}
+.Filebutton{
+    margin-left: 30px;
+    margin-top: 40px;
+    padding: 3px 15px;
+    font-size: 20px;
+    border: none;
+    background-color: #fff;
+}
+.Filebutton:hover{
+    font-style: italic;
+    color: green;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+}
